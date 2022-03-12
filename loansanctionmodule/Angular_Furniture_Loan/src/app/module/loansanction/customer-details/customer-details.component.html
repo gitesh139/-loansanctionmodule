@@ -1,0 +1,40 @@
+
+<router-outlet></router-outlet>
+
+ 
+  <div class="container" align="center">
+    <h3>Customer List</h3>
+    <table class="table table-primary" border="1">
+      <tbody>
+            <tr class="bg-info" align="center"> 
+              <th>CID</th>
+              <th>CNAME</th>
+               <th>EMAIL</th>
+              <th>DOB</th>
+              <th>AGE</th>
+              <th>CITYNAME</th>
+              <th>STATUS</th>
+              <th>REMARK</th>
+               <th>ACTION</th>
+                
+            </tr>
+      </tbody> 
+            <tr *ngFor="let e of customerlist" class="table table-success">
+              <!-- <td>{{e.customer.cid}}</td> -->
+              <td>{{e.customer.cid}}</td>
+              <td>{{e.customer.name}}</td>
+              <td>{{e.customer.email}}</td>
+              <td>{{e.customer.dob}}</td>
+              <td>{{e.customer.age}} </td>
+              <td>{{e.customer.cityName}}</td>
+              <td>{{e.status}}</td>
+              <td>{{e.remarks}}</td>
+              <td><a [routerLink]="['/role/cr/customerlist',e.sid]" style="color:rgb(238, 24, 24)">show details</a> &nbsp;&nbsp;
+              <a [routerLink]="['/role/cr/sanctionletter',e.sid]" style="color:rgb(238, 24, 24)">Generate Sanction Letter</a></td>
+                        
+            </tr>
+       
+    </table>
+    
+    
+</div> 

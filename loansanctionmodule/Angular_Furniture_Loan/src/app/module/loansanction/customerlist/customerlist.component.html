@@ -1,0 +1,72 @@
+
+<div class="jumbotron"style="text-align:center" >
+    <h3>Customer Details</h3>
+    <table class="table table-danger" style="text-align:center" >
+        <tr>
+            <td> ID</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.cid}}></td>
+        </tr>
+        <tr>
+            <td> Name</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.name}}></td>
+        </tr>
+        <tr>
+            <td> Date Of Birth</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.dob}}></td>
+        </tr>
+        <tr>
+            <td> Age</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.age}}></td>
+        </tr>
+        <tr>
+            <td> Gender</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.gender}}></td>
+        </tr>
+        <tr>
+            <td> Email</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.email}}></td>
+        </tr>
+        <tr>
+            <td> Loan Ammount</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.loanAmount}}></td>
+        </tr>
+        <tr>
+            <td> Duration</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.duration}}></td>
+        </tr>
+        <tr>
+            <td> Pincode</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.pincode}}></td>
+        </tr>
+        <tr>
+            <td> AreaName</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.areaName}}></td>
+        </tr>
+        <tr>
+            <td> CityName</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.cityName}}></td>
+        </tr>
+        <tr>
+            <td> Business Name</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.businessName}}></td>
+        </tr>
+        <tr>
+            <td> Bank Name</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.bankName}}></td>
+        </tr>
+        <tr>
+            <td> Branch Name</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.branchName}}></td>
+        </tr>
+        <tr>
+            <td> Account Number</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.accountNo}}></td>
+        </tr>
+        <tr>
+            <td> IFSC Code</td>
+            <td> <input type="text" value={{loanSanctionObj.customer.ifscCode}}></td>
+        </tr>
+        
+    </table>
+    <button class="btn btn-info float-right" (click)="getback()">Go Back</button>
+</div>

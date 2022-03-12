@@ -1,0 +1,94 @@
+
+<div class="jumbotron" style="text-align:center" id="htmlData" border="1">
+    <h3>Sanction Letter</h3>
+    <div   class="container">
+        <p align="left" >Date:6/3/2022<br>Dear XYZ<br>Thank you for choosing ABC Bank.Based on the application and information provided
+            therein,<br>we are pleased to extend an offer to you for a loan as per the preliminary 
+            terms and conditions mentioned below.  <br>
+        </p></div>
+    <table class="table" style="text-align:center" >
+        
+        <tr>
+            <td> CID</td>
+            <td>{{loanSanctionObj.customer.cid}}</td>
+            
+        </tr>
+        <tr>
+            <td> Cname</td>
+            <td>{{loanSanctionObj.customer.name}}</td>
+           
+        </tr>
+        <tr>
+            <td> Contact Detalis</td>
+            <td>{{loanSanctionObj.contact_details}}</td>
+          
+        </tr>
+        <tr>
+            <td> Interest Type</td>
+            <td>{{loanSanctionObj.interest_type}}</td>
+            
+        </tr><tr>
+            <td>Loan Ammount</td>
+            <td>{{loanSanctionObj.customer.loanAmount}}</td>
+            
+        </tr>
+        <tr>
+            <td> Loan Tenure</td>
+            <td>{{loanSanctionObj.loan_tenure}}</td>
+    
+        </tr>
+        <tr>
+            <td> Rate Of Interest</td>
+            <td>{{loanSanctionObj.rate_Of_interest}}</td>
+            
+        </tr>
+        <tr>
+            <td> Total Ammount To Repay</td>
+            <td> <input type="text" [(ngModel)]="loanSanctionObj.loan_amt_sanctioned" value={{loanSanctionObj.loan_amt_sanctioned}}> &nbsp;&nbsp; 
+             <br>   <button (click)="CalculateTotalAmmount()">Calculate</button></td>
+        </tr>
+        <tr>
+            <td> Monthly EMI Amount</td>
+            <td> <input type="text" [(ngModel)]="loanSanctionObj.monthly_emi_amount" value={{loanSanctionObj.monthly_emi_amount}}>
+               <br> <button (click)="CalculateEMI()">Calculate</button></td>
+        </tr>        
+        <tr>
+            <td> Status</td>
+            <td> <input type="text" [(ngModel)]="loanSanctionObj.status" value={{loanSanctionObj.status}}></td>
+        </tr>
+        <tr>
+            <td> Sanction Date</td>
+            <td> <input type="text" [(ngModel)]="loanSanctionObj.sanction_date" value={{loanSanctionObj.sanction_date}}></td>
+        </tr>
+        <tr>
+            <td> Remark</td>
+            <td> <input type="text" [(ngModel)]="loanSanctionObj.remarks" value={{loanSanctionObj.remarks}}></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" (click)="updateData(loanSanctionObj)">Update</button>
+            </td>
+        </tr>
+    </table>
+        <br>
+        <div align="left" class="container">
+            Additional conditions to comply prior to loan disbursal:<br>
+            1.Repayment from ABC Bank<br>
+            2.Legal vetting and search to be conducted<br>
+            3.NOC and offered collateral<br>
+            4.Confirmation form,official ID and copy of ID<br>
+         </div>
+    
+        
+    
+
+</div>
+<button class="btn btn-info float-left" (click)="openPDF()">Download PDF</button> &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-info float-left" (click)="sendmail()">Send Email</button>
+    <button class="btn btn-info float-right" (click)="getback()">Go Back</button>
+    <!-- <div class="col-md-4 text-right">
+        
+      </div> -->
+      
+
+

@@ -1,0 +1,26 @@
+
+<div class="logo">
+  <!-- <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+    <div class="logo-img"> -->
+        <img src="assets\img\pass_size.jpg" width="100" height="100"/>
+    <!-- </div>
+  </a>
+  <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+      Creative Tim
+  </a> -->
+</div>
+<div class="sidebar-wrapper">
+  <ul class="nav">
+      <li routerLinkActive="active" *ngFor="let menuItem of menuItems[0][role]" class="{{menuItem.class}} nav-item">
+          <!-- <a [routerLink]="[menuItem.path]">
+              <i class="now-ui-icons {{menuItem.icon}}"></i>
+              <p>{{menuItem.title}}</p>
+          </a> -->
+          <a class="nav-link" [routerLink]="[role,menuItem.path]">
+              <!-- <i class="material-icons">{{menuItem.icon}}</i> -->
+              <p>{{menuItem.title}}</p>
+          </a>
+      </li>
+  </ul>
+</div>
+
